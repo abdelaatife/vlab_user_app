@@ -1,4 +1,5 @@
-// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, unnecessary_new, unused_local_variable
+
+// ignore_for_file: camel_case_types
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -38,17 +39,22 @@ class _loginPageState extends State<loginPage> {
           }
         });
       } catch (e) {
-        print(e);e
+        print(e);
       }
     }
   }
+  double getScreenWidth(BuildContext context) {
+  return MediaQuery.of(context).size.width;
+}
 
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       body: Wrap(
         children: [
           Container(
+            
             margin: const EdgeInsets.only(left: 30, right: 30, top: 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -78,6 +84,7 @@ class _loginPageState extends State<loginPage> {
                             fontSize: 30, fontWeight: FontWeight.bold)),
                   ],
                 ),
+                
                 const SizedBox(
                   height: 25,
                 ),
